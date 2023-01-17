@@ -2,6 +2,7 @@ import './App.css';
 import { Auth } from './components/Auth';
 import Cookies from 'universal-cookie';
 import { useRef, useState } from 'react';
+import { Chat } from './components/Chat';
 
 const cookies = new Cookies()
 
@@ -22,7 +23,7 @@ function App() {
   return (
     <div>
       {room ?
-        (<div>Chat</div>)
+        (<Chat room={room} />)
         :
         (<div>
           <label>Enter room name</label>
